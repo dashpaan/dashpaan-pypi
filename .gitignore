@@ -1,0 +1,17 @@
+# Project
+/.idea
+/.idea/workspace.xml
+.DS_Store
+/venv/
+*.sqlite
+*.sqlite3
+
+
+# Caches
+__pycache__
+__pycache__*
+*.pyc
+*.py[cod]
+
+
+# File Variants
