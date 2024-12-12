@@ -1,6 +1,5 @@
-import json as origin
-
 from json import *
+import json as origin
 
 from datetime import datetime
 
