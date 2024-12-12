@@ -1,4 +1,4 @@
-from dashpaan.elements.base import Element
+from elements.base import Element
 
 
 class Heading(Element):

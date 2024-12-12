@@ -3,8 +3,8 @@ import json as origin
 
 from datetime import datetime
 
-from dashpaan.elements.base import Element
-from dashpaan.elements.reverse import convert
+from elements.base import Element
+from elements.reverse import convert
 
 
 class DashpaanJSONEncoder(origin.JSONEncoder):
