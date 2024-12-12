@@ -1,4 +1,4 @@
-from elements.heading import Heading
+from dashpaan.elements.heading import Heading
 
 
 def convert(obj):
