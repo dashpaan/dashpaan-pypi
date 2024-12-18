@@ -1,4 +1,4 @@
-import django
-import elements
-import flask
-import json
+from dashpaan import django
+from dashpaan import elements
+from dashpaan import flask
+from dashpaan import json
