@@ -10,5 +10,9 @@ from .elements.wave_chart import WaveChart
 from .elements.circular_distribution import CircularDistribution
 from .elements.chart_comparison import ChartComparison
 from .elements.switch import Switch
+from .elements.flex import Flex
+from .elements.information import Information
+from .elements.card import Card
+from .elements.select import Select
 
 
