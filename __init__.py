@@ -14,5 +14,12 @@ from .elements.flex import Flex
 from .elements.information import Information
 from .elements.card import Card
 from .elements.select import Select
+from .elements.donut_chart import DonutChart
+from .elements.line_chart import LineChart
+from .elements.sticky_stat import StickyStat
+from .elements.sticky_target import StickyTarget
+from .elements.tabular import Tabular
+from .elements.text_area_editor import TextAreaEditor
+from .elements.wysiwig_editor import WYSIWYGEditor
 
 
