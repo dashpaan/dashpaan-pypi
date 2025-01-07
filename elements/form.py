@@ -13,7 +13,7 @@ class Form(Element):
         return {
             **super(Form, self).json(),
             "title": self.title,
-            "size": self.title,
+            "size": self.size,
             "fields": [field.json() for field in self.fields],
             "buttons": [button.json() for button in self.buttons]
         }
