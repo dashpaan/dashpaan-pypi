@@ -22,7 +22,7 @@ class Page(Element):
             "data": self.data,
             "variables": self.variables,
             "templates": self.templates,
-            "elements": [element.json() for element in self.elements],
+            "elements": [element for element in self.elements],
             "navigation": self.navigation
         }
 
