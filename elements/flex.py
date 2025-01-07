@@ -17,7 +17,7 @@ class Flex(Element):
             "breakable": self.breakable,
             "className": self.class_name,
             "size": self.size,
-            "elements": [element for element in self.elements]
+            "elements": [element.json() for element in self.elements]
         }
 
     @classmethod
