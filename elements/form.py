@@ -12,7 +12,6 @@ class Form(Element):
     def json(self):
         return {
             **super(Form, self).json(),
-            "title": self.title,
             "size": self.size,
             "fields": [field.json() for field in self.fields],
             "buttons": [button.json() for button in self.buttons]
