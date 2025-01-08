@@ -12,7 +12,7 @@ class Page(Element):
     variables = {}
     templates = {}
     elements = []
-    navigation = {}
+    navigation = "inherit"
 
     def json(self):
         return {
