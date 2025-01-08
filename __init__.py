@@ -21,5 +21,6 @@ from .elements.sticky_target import StickyTarget
 from .elements.tabular import Tabular
 from .elements.text_area_editor import TextAreaEditor
 from .elements.wysiwig_editor import WYSIWYGEditor
+from .elements.navigation import Navigation
 
 
