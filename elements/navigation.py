@@ -6,7 +6,7 @@ from dashpaan.elements.base import Element
 class Navigation(Element):
     kind = "navigation"
 
-    items = {}
+    items = []
 
     def json(self):
         return {
