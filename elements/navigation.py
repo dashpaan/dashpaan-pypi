@@ -11,7 +11,7 @@ class Navigation(Element):
     def json(self):
         return {
             **super(Navigation, self).json(),
-            "items": [item.json() for item in self.items],
+            "items": self.items
         }
 
     @classmethod
