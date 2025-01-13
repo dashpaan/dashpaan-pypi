@@ -22,5 +22,7 @@ from .elements.tabular import Tabular
 from .elements.text_area_editor import TextAreaEditor
 from .elements.wysiwig_editor import WYSIWYGEditor
 from .elements.navigation import Navigation
+from .elements.qr_code import QrCode
+from .elements.pie_chart import PieChart
 
 

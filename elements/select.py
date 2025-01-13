@@ -6,6 +6,7 @@ class Select(Element):
 
     name = ""
     default = ""
+    multiple = True
     label = ""
     options = []
     value = ""
