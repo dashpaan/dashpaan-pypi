@@ -23,7 +23,7 @@ class Page(Element):
             "variables": self.variables,
             "templates": self.templates,
             "elements": [element.json() for element in self.elements],
-            "navigation": self.navigation.json() if type(self.navigation) is list else self.navigation
+            "navigation": self.navigation.json() if type(self.navigation) is not str else self.navigation
         }
 
     @classmethod
