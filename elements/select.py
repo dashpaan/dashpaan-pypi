@@ -6,6 +6,7 @@ class Select(Element):
 
     name = ""
     default = ""
+    multiple = True
     label = ""
     options = []
     value = ""
@@ -16,6 +17,7 @@ class Select(Element):
             **super(Select, self).json(),
             "name": self.name,
             "default": self.default,
+            "multiple": self.multiple,
             "label": self.label,
             "options": self.options,
             "value": self.value,
@@ -25,3 +27,4 @@ class Select(Element):
     @classmethod
     def from_json(cls, obj):
         return Select(**obj)
+
