@@ -5,8 +5,8 @@ class Flex(Element):
     kind = "flex"
 
     class_name = ""
-    mode = ""
-    breakable = ""
+    mode = "vertical"
+    breakable = True
     size = ""
     elements = []
 
