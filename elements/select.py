@@ -6,11 +6,9 @@ class Select(Element):
 
     name = ""
     default = ""
-    multiple = True
+    multiple = False
     label = ""
     options = []
-    value = ""
-    placeholder = ""
 
     def json(self):
         return {
@@ -19,9 +17,7 @@ class Select(Element):
             "default": self.default,
             "multiple": self.multiple,
             "label": self.label,
-            "options": self.options,
-            "value": self.value,
-            "placeholder": self.placeholder
+            "options": self.options
         }
 
     @classmethod
