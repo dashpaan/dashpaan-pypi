@@ -1,15 +1,13 @@
-import json
-
 from dashpaan.elements.base import Element
 
 
 class TextField(Element):
     kind = "text-field"
 
-    name = ""
-    label = ""
+    name = None
+    label = None
     required = False
-    defaultValue = ""
+    defaultValue = None
 
     def json(self):
         return {

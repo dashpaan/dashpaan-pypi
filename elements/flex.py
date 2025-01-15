@@ -4,10 +4,9 @@ from dashpaan.elements.base import Element
 class Flex(Element):
     kind = "flex"
 
-    class_name = ""
     mode = "vertical"
-    breakable = True
-    size = ""
+    breakable = False
+    size = "1*1"
     elements = []
 
     def json(self):
@@ -15,7 +14,6 @@ class Flex(Element):
             **super(Flex, self).json(),
             "mode": self.mode,
             "breakable": self.breakable,
-            "className": self.class_name,
             "size": self.size,
             "elements": [element.json() for element in self.elements]
         }

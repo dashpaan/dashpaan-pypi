@@ -5,9 +5,9 @@ class Select(Element):
     kind = "select"
 
     name = ""
-    default = ""
-    multiple = False
-    label = ""
+    default = None
+    multiple = None
+    label = None
     options = []
 
     def json(self):
@@ -23,4 +23,3 @@ class Select(Element):
     @classmethod
     def from_json(cls, obj):
         return Select(**obj)
-
