@@ -16,7 +16,8 @@ class Button(Element):
             **super(Button, self).json(),
             "title": self.title,
             "color": self.color,
-            "action": self.action
+            "action": self.action,
+            "data": self.data
         }
 
     @classmethod
