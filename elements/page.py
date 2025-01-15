@@ -12,7 +12,7 @@ class Page(Element):
     variables = {}
     templates = {}
     elements = []
-    navigation = {}
+    navigation = "inherit"
 
     def json(self):
         return {
@@ -23,7 +23,7 @@ class Page(Element):
             "variables": self.variables,
             "templates": self.templates,
             "elements": [element.json() for element in self.elements],
-            "navigation": self.navigation
+            "navigation": self.navigation.json() if type(self.navigation) is not str else self.navigation
         }
 
     @classmethod

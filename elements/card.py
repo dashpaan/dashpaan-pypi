@@ -4,13 +4,13 @@ from dashpaan.elements.base import Element
 class Card(Element):
     kind = "card"
 
-    icons = []
-    cover = ""
-    size = ""
-    title = ""
-    boxes = []
-    menu = {}
-    description = ""
+    icons = None
+    cover = None
+    size = None
+    title = None
+    boxes = None
+    menu = None
+    description = None
 
     def json(self):
         return {

@@ -5,21 +5,19 @@ class Select(Element):
     kind = "select"
 
     name = ""
-    default = ""
-    label = ""
+    default = None
+    multiple = None
+    label = None
     options = []
-    value = ""
-    placeholder = ""
 
     def json(self):
         return {
             **super(Select, self).json(),
             "name": self.name,
             "default": self.default,
+            "multiple": self.multiple,
             "label": self.label,
-            "options": self.options,
-            "value": self.value,
-            "placeholder": self.placeholder
+            "options": self.options
         }
 
     @classmethod
