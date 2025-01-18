@@ -8,7 +8,6 @@ class Button(Element):
 
     title = ""
     color = ""
-    data = True
     action = {}
 
     def json(self):
@@ -16,8 +15,7 @@ class Button(Element):
             **super(Button, self).json(),
             "title": self.title,
             "color": self.color,
-            "action": self.action,
-            "data": self.data
+            "action": self.action
         }
 
     @classmethod
