@@ -6,15 +6,16 @@ from dashpaan.elements.base import Element
 class QrCode(Element):
     kind = "qr_code"
 
-    size = ""
-    url = ""
+    size = "1.5*1.5"
+    link = None
+    tabs = None
 
     def json(self):
         return {
             **super(QrCode, self).json(),
             "url": self.url,
-            "size": self.size,
-
+            "link": self.link,
+            "tabs": self.tabs,
         }
 
     @classmethod
