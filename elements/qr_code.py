@@ -13,7 +13,7 @@ class QrCode(Element):
     def json(self):
         return {
             **super(QrCode, self).json(),
-            "url": self.url,
+            "size": self.size,
             "link": self.link,
             "tabs": self.tabs,
         }
