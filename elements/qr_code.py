@@ -8,6 +8,7 @@ class QrCode(Element):
 
     size = "1.5*1.5"
     link = None
+    title = None
     tabs = None
 
     def json(self):
@@ -15,6 +16,7 @@ class QrCode(Element):
             **super(QrCode, self).json(),
             "size": self.size,
             "link": self.link,
+            "title": self.title,
             "tabs": self.tabs,
         }
 
