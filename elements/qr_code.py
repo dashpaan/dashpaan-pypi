@@ -7,8 +7,10 @@ class QrCode(Element):
     kind = "qr-code"
 
     size = "1.5*1.5"
+
     link = None
     title = None
+
     tabs = None
 
     def json(self):
