@@ -4,7 +4,7 @@ from dashpaan.elements.base import Element
 
 
 class QrCode(Element):
-    kind = "qr_code"
+    kind = "qr-code"
 
     size = "1.5*1.5"
     link = None
