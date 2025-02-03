@@ -1,5 +1,3 @@
-import json
-
 from dashpaan.elements.base import Element
 
 
