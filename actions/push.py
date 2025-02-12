@@ -8,12 +8,14 @@ class Push(Element):
     headers = {}
     payload = {}
     url = ""
+    data = False
 
     def json(self):
         return {
             **super(Push, self).json(),
             "kind": self.kind,
             "type": self.type,
+            "data": self.data,
             "api": {
                 "payload": self.payload,
                 "headers": self.headers,
