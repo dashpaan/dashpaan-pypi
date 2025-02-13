@@ -15,7 +15,7 @@ class TextField(Element):
             "name": self.name,
             "label": self.label,
             "required": self.required,
-            "default": self.defaultValue
+            "defaultValue": self.defaultValue
         }
 
     @classmethod
