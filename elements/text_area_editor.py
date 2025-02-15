@@ -6,13 +6,16 @@ from dashpaan.elements.base import Element
 class TextAreaEditor(Element):
     kind = "text-area-editor"
 
+    defaultValue = ""
     name = ""
+    label = ""
 
     def json(self):
         return {
             **super(TextAreaEditor, self).json(),
-            "version": self.version,
-            "name": self.name
+            "name": self.name,
+            "label": self.label,
+            "defaultValue": self.defaultValue,
         }
 
     @classmethod

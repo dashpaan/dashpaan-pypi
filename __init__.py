@@ -25,4 +25,8 @@ from .elements.navigation import Navigation
 from .elements.qr_code import QrCode
 from .elements.pie_chart import PieChart
 
+from .actions.prompt import Prompt
+from .actions.navigate import Navigate
+from .actions.push import Push
 
+from .django.decorator import page, rest
