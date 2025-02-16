@@ -8,6 +8,7 @@ class DataTable(Element):
 
     uri = ""
     title = ""
+    size = "4*3"
     errors = {}
     columns = []
     rows = []
@@ -19,7 +20,8 @@ class DataTable(Element):
             "title": self.title,
             "errors": self.errors,
             "columns": self.columns,
-            "rows": self.rows
+            "rows": self.rows,
+            "size": self.size
         }
 
     @classmethod
