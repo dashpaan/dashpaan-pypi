@@ -8,7 +8,6 @@ class TextField(Element):
     label = None
     required = False
     default = None
-    defaultValue = None
 
     def json(self):
         return {
@@ -16,7 +15,8 @@ class TextField(Element):
             "name": self.name,
             "label": self.label,
             "required": self.required,
-            "default": self.defaultValue if self.defaultValue else self.default
+            "default": self.default,
+            "defaultValue": self.default
         }
 
     @classmethod
