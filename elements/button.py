@@ -16,7 +16,6 @@ class Button(Element):
             "title": self.title,
             "color": self.color,
             "action": self.action,
-            "data": self.data
         }
 
     @classmethod
