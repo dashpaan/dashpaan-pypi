@@ -15,6 +15,7 @@ class Select(Element):
             **super(Select, self).json(),
             "name": self.name,
             "default": self.default,
+            "defaultValue": self.default,
             "multiple": self.multiple,
             "label": self.label,
             "options": self.options

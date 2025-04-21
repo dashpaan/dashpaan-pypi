@@ -8,7 +8,6 @@ class Button(Element):
 
     title = ""
     color = ""
-    data = True
     action = {}
 
     def json(self):

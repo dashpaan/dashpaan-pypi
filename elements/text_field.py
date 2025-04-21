@@ -7,7 +7,7 @@ class TextField(Element):
     name = None
     label = None
     required = False
-    defaultValue = None
+    default = None
 
     def json(self):
         return {
@@ -15,7 +15,8 @@ class TextField(Element):
             "name": self.name,
             "label": self.label,
             "required": self.required,
-            "defaultValue": self.defaultValue
+            "default": self.default,
+            "defaultValue": self.default
         }
 
     @classmethod

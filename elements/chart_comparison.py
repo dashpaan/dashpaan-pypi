@@ -4,7 +4,7 @@ from dashpaan.elements.base import Element
 
 
 class ChartComparison(Element):
-    kind = "wave-chart"
+    kind = "chart-comparison"
 
     data = {}
 
