@@ -8,12 +8,17 @@ class WYSIWYGEditor(Element):
 
     name = ""
     content = ""
+    default = ""
+    label = ""
 
     def json(self):
         return {
             **super(WYSIWYGEditor, self).json(),
             "name": self.name,
-            "content": self.content
+            "content": self.content,
+            "label": self.label,
+            "default": self.default,
+            "defaultValue": self.default,
         }
 
     @classmethod

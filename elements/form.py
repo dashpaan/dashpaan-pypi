@@ -5,7 +5,7 @@ from dashpaan.elements.base import Element
 
 class Form(Element):
     kind = "form"
-    size = ""
+    size = "3*4"
     fields = []
     buttons = []
 
