@@ -1,10 +1,8 @@
-import json
-
 from dashpaan.elements.base import Element
 
 
-class PieChart(Element):
-    kind = "pie_chart"
+class DonutChart(Element):
+    kind = "donut-chart"
 
     title = ""
     series = {}
@@ -13,7 +11,8 @@ class PieChart(Element):
 
     def json(self):
         return {
-            **super(PieChart, self).json(),
+            **super(DonutChart, self).json(),
+            "version": self.version,
             "title": self.title,
             "series": self.series,
             "labels": self.labels,
@@ -22,4 +21,4 @@ class PieChart(Element):
 
     @classmethod
     def from_json(cls, obj):
-        return PieChart(**obj)
+        return DonutChart(**obj)

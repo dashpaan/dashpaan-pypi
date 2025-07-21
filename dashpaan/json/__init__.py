@@ -1,5 +1,4 @@
-from json import *
-import json as origin
+from dashpaan.json import *
 
 from datetime import datetime
 

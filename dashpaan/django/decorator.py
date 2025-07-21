@@ -1,8 +1,8 @@
 from functools import wraps
 
-from django.http import JsonResponse
+from dashpaan.django import JsonResponse
 
-from json import loads as origin_loads
+from dashpaan.json import loads as origin_loads
 from dashpaan.json import JSONEncoder, dumps as patched_dumps
 
 
