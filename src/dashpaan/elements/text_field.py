@@ -1,4 +1,4 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.elements.base import Element
 
 
 class TextField(Element):
@@ -7,6 +7,7 @@ class TextField(Element):
     name = None
     label = None
     required = False
+    disabled = False
     default = None
 
     def json(self):
@@ -16,6 +17,7 @@ class TextField(Element):
             "label": self.label,
             "required": self.required,
             "default": self.default,
+            "disabled": self.disabled,
             "defaultValue": self.default
         }
 

@@ -1,4 +1,4 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.elements.base import Element
 
 
 class Select(Element):

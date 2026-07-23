@@ -1,4 +1,6 @@
-from src.dashpaan.elements.base import Element
+import json
+
+from dashpaan.elements.base import Element
 
 
 class WaveChart(Element):
@@ -8,6 +10,7 @@ class WaveChart(Element):
     title = ""
     subtitle = ""
     series = {}
+    labels = []
 
     def json(self):
         return {
@@ -15,7 +18,8 @@ class WaveChart(Element):
             "size": self.size,
             "title": self.title,
             "subtitle": self.subtitle,
-            "series": self.series
+            "series": self.series,
+            "labels": self.labels
         }
 
     @classmethod

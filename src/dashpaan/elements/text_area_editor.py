@@ -1,4 +1,6 @@
-from src.dashpaan.elements.base import Element
+import json
+
+from dashpaan.elements.base import Element
 
 
 class TextAreaEditor(Element):
