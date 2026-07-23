@@ -1,8 +1,10 @@
-from src.dashpaan.elements.base import Element
+import json
+
+from dashpaan.elements.base import Element
 
 
 class PieChart(Element):
-    kind = "pie_chart"
+    kind = "pie-chart"
 
     title = ""
     series = {}
