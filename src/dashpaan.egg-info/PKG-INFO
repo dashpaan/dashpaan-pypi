@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: dashpaan
+Version: 1.0.4
+Summary: A Python platform for building dynamic, data-driven dashboards and operational interfaces.
+Author-email: Hesam Jaferi <hesam.jaferi@gmail.com>
+Project-URL: Homepage, https://github.com/dashpaan
+Project-URL: Repository, https://github.com/dashpaan/dashpaan-pypi
+Project-URL: Issues, https://github.com/dashpaan/dashpaan-pypi
+Keywords: dashboard,analytics,business intelligence,data visualization,operations,rest api,json,dynamic ui
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31
+
+# DASHPAAN
+
+DASHPAAN is a Python platform for building dynamic, data-driven dashboards and operational interfaces from APIs and structured configuration.
+
+It helps organizations turn complex operational data into interactive dashboards, visualizations, workflows, and business processes without repeatedly building custom frontend interfaces from scratch.
+
+## Core Capabilities
+
+* Dynamic JSON-driven dashboards
+* REST API-based interface generation
+* Dynamic pages, menus, tables, and UI elements
+* User authentication and access management
+* Dashboard-level permissions
+* Data loading, aggregation, and transformation
+* Interactive data editing and submission
+* Real-time data visualization
+* Operational workflows and custom forms
+* Notifications and organization-wide messaging
+* Project and goal progress tracking
+* Automated operational error detection and reporting
+
+## Architecture
+
+DASHPAAN is designed around a RESTful, API-centric architecture.
+
+The platform can integrate with:
+
+* Multiple backend services
+* Multiple data sources
+* PostgreSQL-based systems
+* Cloud-native infrastructure
+* Kubernetes and OpenShift deployments
+* Horizontally scalable API services
+
+Its interface generation model is driven by structured data and configuration, allowing dashboards and operational interfaces to be generated dynamically at runtime.
+
+## Installation
+
+```bash
+pip install dashpaan
+```
+
+For development:
+
+```bash
+git clone <repository-url>
+cd dashpaan
+python -m pip install -e .
+```
+
+## Basic Usage
+
+```python
+import dashpaan
+```
+
+Additional modules can be imported according to the features used by your application.
+
+## Optional Integrations
+
+DASHPAAN can integrate with technologies commonly used in modern web and data platforms, including:
+
+* Django
+* PostgreSQL
+* Requests
+* Pillow
+* Cryptography
+* Authlib
+* Cloud storage services
+* Kubernetes and OpenShift
+
+## Development
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Install the package in editable mode:
+
+```bash
+python -m pip install -e .
+```
+
+## License
+
+See the `LICENSE` file for licensing information.
+
+## Author
+
+Hesam Jaferi
