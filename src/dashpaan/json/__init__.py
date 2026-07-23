@@ -1,9 +1,10 @@
-from src.dashpaan.json import *
+from json import *
+import json as origin
 
 from datetime import datetime
 
-from src.dashpaan.elements.base import Element
-from src.dashpaan.elements.reverse import convert
+from dashpaan.elements.base import Element
+from dashpaan.elements.reverse import convert
 
 
 class DashpaanJSONEncoder(origin.JSONEncoder):
