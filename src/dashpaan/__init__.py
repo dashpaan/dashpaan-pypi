@@ -1,3 +1,9 @@
+# top-level classes
+from .page import Page
+from .navigation import Navigation
+from .authentication import Authentication
+
+# elements
 from .elements.heading import Heading
 from .elements.block import Block
 from .elements.button import Button
@@ -5,7 +11,6 @@ from .elements.chart_comparison import ChartComparison
 from .elements.data_table import DataTable
 from .elements.form import Form
 from .elements.form_element_upload_image import FormElementUploadImage
-from dashpaan.page import Page
 from .elements.text_field import TextField
 from .elements.wave_chart import WaveChart
 from .elements.circular_distribution import CircularDistribution
@@ -24,13 +29,12 @@ from .elements.sticky_target import StickyTarget
 from .elements.tabular import Tabular
 from .elements.text_area_editor import TextAreaEditor
 from .elements.wysiwig_editor import WYSIWYGEditor
-from .elements.navigation import Navigation
 from .elements.qr_code import QrCode
 from .elements.pie_chart import PieChart
 
+# actions
 from .actions.prompt import Prompt
 from .actions.navigate import Navigate
 from .actions.push import Push
 from .actions.external import External
 from .actions.reaction import Reaction
-
