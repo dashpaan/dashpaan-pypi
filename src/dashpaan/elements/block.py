@@ -1,23 +1,27 @@
 from dashpaan.elements.base import Element
 
 
-class Flex(Element):
-    kind = "flex"
+class Block(Element):
+    kind = "block"
 
     mode = "vertical"
     breakable = False
+    round = False
+    background = None
     size = "1*1"
     elements = []
 
     def json(self):
         return {
-            **super(Flex, self).json(),
+            **super(Block, self).json(),
             "mode": self.mode,
             "breakable": self.breakable,
             "size": self.size,
+            "round": self.round,
+            "background": self.background,
             "elements": [element.json() for element in self.elements]
         }
 
     @classmethod
     def from_json(cls, obj):
-        return Flex(**obj)
+        return Block(**obj)
