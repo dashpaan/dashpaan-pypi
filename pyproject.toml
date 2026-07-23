@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dashpaan"
-version = "1.0.4"
+version = "1.0.5"
 
-description = "A Python platform for building dynamic, data-driven dashboards and operational interfaces."
+description = "A platform for building dynamic, data-driven dashboards and operational interfaces."
 
 readme = "README.md"
 
