@@ -1,9 +1,9 @@
 from functools import wraps
 
-from src.dashpaan.django import JsonResponse
+from django.http import JsonResponse
 
-from src.dashpaan.json import loads as origin_loads
-from src.dashpaan.json import JSONEncoder, dumps as patched_dumps
+from json import loads as origin_loads
+from dashpaan.json import JSONEncoder, dumps as patched_dumps
 
 
 def rest(view_func):
