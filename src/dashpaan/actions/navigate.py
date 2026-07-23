@@ -1,8 +1,7 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.actions.base import Action
 
 
-class Navigate(Element):
-    kind = "action"
+class Navigate(Action):
     type = "navigate"
 
     headers = {}
@@ -13,8 +12,6 @@ class Navigate(Element):
     def json(self):
         return {
             **super(Navigate, self).json(),
-            "kind": self.kind,
-            "type": self.type,
             "api": {
                 "payload": self.payload,
                 "headers": self.headers,

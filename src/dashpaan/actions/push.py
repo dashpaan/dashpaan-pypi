@@ -1,8 +1,7 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.actions.base import Action
 
 
-class Push(Element):
-    kind = "action"
+class Push(Action):
     type = "push"
 
     headers = {}
@@ -13,8 +12,6 @@ class Push(Element):
     def json(self):
         return {
             **super(Push, self).json(),
-            "kind": self.kind,
-            "type": self.type,
             "data": self.data,
             "api": {
                 "payload": self.payload,

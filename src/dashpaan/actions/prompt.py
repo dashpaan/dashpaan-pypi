@@ -1,8 +1,7 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.actions.base import Action
 
 
-class Prompt(Element):
-    kind = "action"
+class Prompt(Action):
     type = "prompt"
 
     elements = []
@@ -13,8 +12,6 @@ class Prompt(Element):
     def json(self):
         return {
             **super(Prompt, self).json(),
-            "kind": self.kind,
-            "type": self.type,
             "close": self.close,
             "print": self.print,
             "title": self.title,
