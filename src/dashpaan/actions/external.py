@@ -1,8 +1,7 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.actions.base import Action
 
 
-class External(Element):
-    kind = "action"
+class External(Action):
     type = "external"
 
     url = ""
@@ -10,8 +9,6 @@ class External(Element):
     def json(self):
         return {
             **super(External, self).json(),
-            "kind": self.kind,
-            "type": self.type,
             "api": {
                 "url": self.url,
             }
