@@ -1,6 +1,6 @@
 # DASHPAAN
 
-DASHPAAN is a Python platform for building dynamic, data-driven dashboards and operational interfaces from APIs and structured configuration.
+DASHPAAN is a platform for building dynamic, data-driven dashboards and operational interfaces from APIs and structured configuration.
 
 It helps organizations turn complex operational data into interactive dashboards, visualizations, workflows, and business processes without repeatedly building custom frontend interfaces from scratch.
 
