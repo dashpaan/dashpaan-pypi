@@ -1,4 +1,4 @@
-from src.dashpaan.elements.base import Element
+from dashpaan.elements.base import Element
 
 
 class Heading(Element):
@@ -6,12 +6,14 @@ class Heading(Element):
 
     title = ""
     subtitle = ""
+    align = "center"
 
     def json(self):
         return {
             **super(Heading, self).json(),
             "title": self.title,
-            "subtitle": self.subtitle
+            "subtitle": self.subtitle,
+            "align": self.align
         }
 
     @classmethod
