@@ -2,6 +2,9 @@ from dashpaan.actions.base import Action
 
 
 class Reaction:
+    kind = "action"
+    version = "v1"
+
     action = Action()
 
     def __init__(self, action):
@@ -9,6 +12,8 @@ class Reaction:
 
     def json(self):
         return {
+            "kind": self.kind,
+            "version": self.version,
             "reaction": self.action.json(),
         }
 

@@ -1,46 +1,79 @@
-from dashpaan.actions.navigate import Navigate
-from dashpaan.actions.prompt import Prompt
-from dashpaan.actions.push import Push
-from dashpaan.elements.button import Button
-from dashpaan.elements.card import Card
-from dashpaan.elements.chart_comparison import ChartComparison
-from dashpaan.elements.circular_distribution import CircularDistribution
-from dashpaan.elements.data_table import DataTable
-from dashpaan.elements.donut_chart import DonutChart
-from dashpaan.elements.flex import Flex
-from dashpaan.elements.form import Form
-from dashpaan.elements.form_element_upload_image import FormElementUploadImage
-from dashpaan.elements.heading import Heading
-from dashpaan.elements.information import Information
-from dashpaan.elements.line_chart import LineChart
-from dashpaan.elements.navigation import Navigation
-from dashpaan.page import Page
-from dashpaan.elements.pie_chart import PieChart
-from dashpaan.elements.qr_code import QrCode
-from dashpaan.elements.select import Select
-from dashpaan.elements.sticky_stat import StickyStat
-from dashpaan.elements.sticky_target import StickyTarget
-from dashpaan.elements.switch import Switch
-from dashpaan.elements.tabular import Tabular
-from dashpaan.elements.text_area_editor import TextAreaEditor
-from dashpaan.elements.text_field import TextField
-from dashpaan.elements.wave_chart import WaveChart
-from dashpaan.elements.wysiwig_editor import WYSIWYGEditor
+# top-level classes
+from .page import Page
+from .navigation import Navigation
+from .authentication import Authentication
+
+# elements
+from .elements.heading import Heading
+from .elements.block import Block
+from .elements.button import Button
+from .elements.data_table import DataTable
+from .elements.form import Form
+from .elements.form_element_upload_image import FormElementUploadImage
+from .elements.text_field import TextField
+from .elements.wave_chart import WaveChart
+from .elements.circular_distribution import CircularDistribution
+from .elements.chart_comparison import ChartComparison
+from .elements.switch import Switch
+from .elements.flex import Flex
+from .elements.information import Information
+from .elements.card import Card
+from .elements.record import Record
+from .elements.cta import CTA
+from .elements.select import Select
+from .elements.donut_chart import DonutChart
+from .elements.line_chart import LineChart
+from .elements.sticky_stat import StickyStat
+from .elements.sticky_target import StickyTarget
+from .elements.tabular import Tabular
+from .elements.text_area_editor import TextAreaEditor
+from .elements.wysiwig_editor import WYSIWYGEditor
+from .elements.qr_code import QrCode
+from .elements.pie_chart import PieChart
+
+# actions
+from .actions.prompt import Prompt
+from .actions.navigate import Navigate
+from .actions.push import Push
+from .actions.external import External
+from .actions.reaction import Reaction
 
 
 def convert(obj):
-    if "kind" in obj:
+    if "kind" not in obj:
+        raise ValueError("Not Valid Element")
+
+    if "Top-Level classes":
+        if obj["kind"] == "page":
+            return Page.from_json(obj)
+
+        if obj["kind"] == "navigation":
+            return Navigation.from_json(obj)
+
+        if obj["kind"] == "authentication":
+            return Authentication.from_json(obj)
+
+    if "Elements":
         if obj["kind"] == "heading":
             return Heading.from_json(obj)
 
         if obj["kind"] == "button":
             return Button.from_json(obj)
 
+        if obj["kind"] == "cta":
+            return CTA.from_json(obj)
+
         if obj["kind"] == "card":
             return Card.from_json(obj)
 
+        if obj["kind"] == "record":
+            return Record.from_json(obj)
+
         if obj["kind"] == "flex":
             return Flex.from_json(obj)
+
+        if obj["kind"] == "block":
+            return Block.from_json(obj)
 
         if obj["kind"] == "chart-comparison":
             return ChartComparison.from_json(obj)
@@ -56,9 +89,6 @@ def convert(obj):
 
         if obj["kind"] == "text-area-editor":
             return TextAreaEditor.from_json(obj)
-
-        if obj["kind"] == "page":
-            return Page.from_json(obj)
 
         if obj["kind"] == "text-field":
             return TextField.from_json(obj)
@@ -78,7 +108,7 @@ def convert(obj):
         if obj["kind"] == "chart-line":
             return LineChart.from_json(obj)
 
-        if obj["kind"] == "pie_chart":
+        if obj["kind"] == "pie-chart":
             return PieChart.from_json(obj)
 
         if obj["kind"] == "form":
@@ -102,8 +132,9 @@ def convert(obj):
         if obj["kind"] == "wave-chart":
             return WaveChart.from_json(obj)
 
-        if obj["kind"] == "navigation":
-            return Navigation.from_json(obj)
+    if "Actions":
+        if obj["kind"] == "reaction":
+            return Reaction.from_json(obj)
 
         if obj["kind"] == "action":
             if obj["type"] == 'push':
@@ -114,5 +145,8 @@ def convert(obj):
 
             if obj["type"] == 'navigate':
                 return Navigate.from_json(obj)
+
+            if obj["type"] == 'external':
+                return External.from_json(obj)
 
     raise ValueError("Not Valid Element")
