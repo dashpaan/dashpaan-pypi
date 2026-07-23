@@ -64,6 +64,7 @@ class Record(Element):
 
         color = None
         icon = None
+        title = None
         action = None
 
         def json(self):
@@ -71,6 +72,7 @@ class Record(Element):
                 **super(Record.Badge, self).json(),
                 "color": self.color,
                 "icon": self.icon,
+                "title": self.title,
                 "action": self.action.json() if self.action else None,
             }
 
