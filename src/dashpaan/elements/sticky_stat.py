@@ -1,13 +1,15 @@
-from src.dashpaan.elements.base import Element
+import json
+
+from dashpaan.elements.base import Element
 
 
 class StickyStat(Element):
     kind = "sticky-stat"
 
-    size = ""
+    title = None
     value = 0
-    color = ""
-    title = ""
+    color = "#000"
+    size = "1*1"
 
     def json(self):
         return {
