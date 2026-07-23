@@ -1,19 +1,21 @@
-from src.dashpaan.elements.base import Element
+import json
+
+from dashpaan.elements.base import Element
 
 
 class Button(Element):
     kind = "button"
 
     title = ""
-    color = ""
-    action = {}
+    color = "primary"
+    action = None
 
     def json(self):
         return {
             **super(Button, self).json(),
             "title": self.title,
             "color": self.color,
-            "action": self.action,
+            "action": self.action.json() if self.action else None,
         }
 
     @classmethod
