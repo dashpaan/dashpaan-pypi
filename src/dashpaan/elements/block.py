@@ -6,7 +6,7 @@ class Block(Element):
 
     mode = "vertical"
     breakable = False
-    round = False
+    rounded = False
     background = None
     size = "1*1"
     elements = []
@@ -17,7 +17,7 @@ class Block(Element):
             "mode": self.mode,
             "breakable": self.breakable,
             "size": self.size,
-            "round": self.round,
+            "rounded": self.rounded,
             "background": self.background,
             "elements": [element.json() for element in self.elements]
         }
