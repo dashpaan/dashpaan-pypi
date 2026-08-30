@@ -8,6 +8,7 @@ class Navigate(Action):
     payload = {}
     uri = ""
     url = ""
+    method = "GET"
 
     def json(self):
         return {
@@ -16,7 +17,8 @@ class Navigate(Action):
                 "payload": self.payload,
                 "headers": self.headers,
                 "url": self.url,
-                "uri": self.uri
+                "uri": self.uri,
+                "method": self.method
             }
         }
 
