@@ -38,3 +38,6 @@ from .actions.navigate import Navigate
 from .actions.push import Push
 from .actions.external import External
 from .actions.reaction import Reaction
+
+# decorators
+from .decorator import rest

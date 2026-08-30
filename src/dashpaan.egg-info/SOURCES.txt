@@ -2,6 +2,7 @@ README.md
 pyproject.toml
 src/dashpaan/__init__.py
 src/dashpaan/authentication.py
+src/dashpaan/decorator.py
 src/dashpaan/navigation.py
 src/dashpaan/page.py
 src/dashpaan/reverse.py
@@ -17,8 +18,6 @@ src/dashpaan/actions/navigate.py
 src/dashpaan/actions/prompt.py
 src/dashpaan/actions/push.py
 src/dashpaan/actions/reaction.py
-src/dashpaan/django/__init__.py
-src/dashpaan/django/decorator.py
 src/dashpaan/elements/__init__.py
 src/dashpaan/elements/base.py
 src/dashpaan/elements/block.py
@@ -48,5 +47,4 @@ src/dashpaan/elements/text_area_editor.py
 src/dashpaan/elements/text_field.py
 src/dashpaan/elements/wave_chart.py
 src/dashpaan/elements/wysiwig_editor.py
-src/dashpaan/flask/__init__.py
 src/dashpaan/json/__init__.py
