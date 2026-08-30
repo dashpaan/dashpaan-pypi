@@ -3,13 +3,15 @@ import json as origin
 
 from datetime import datetime
 
+from dashpaan.actions.base import Action
 from dashpaan.elements.base import Element
+
 from dashpaan.reverse import convert
 
 
 class DashpaanJSONEncoder(origin.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj, Element):
+        if isinstance(obj, Element) or isinstance(obj, Action):
             return obj.json()
 
         if isinstance(obj, datetime):
