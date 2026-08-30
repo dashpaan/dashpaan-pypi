@@ -2,7 +2,7 @@ from dashpaan.actions.base import Action
 
 
 class Reaction:
-    kind = "action"
+    kind = "reaction"
     version = "v1"
 
     action = Action()
