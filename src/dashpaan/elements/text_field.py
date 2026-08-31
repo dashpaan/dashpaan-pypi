@@ -9,6 +9,7 @@ class TextField(Element):
     required = False
     disabled = False
     default = None
+    password = False
 
     def json(self):
         return {
@@ -18,6 +19,7 @@ class TextField(Element):
             "required": self.required,
             "default": self.default,
             "disabled": self.disabled,
+            "password": self.password,
             "defaultValue": self.default
         }
 

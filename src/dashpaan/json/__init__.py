@@ -4,6 +4,7 @@ import json as origin
 from datetime import datetime
 
 from dashpaan.actions.base import Action
+from dashpaan.actions.reaction import Reaction
 from dashpaan.elements.base import Element
 
 from dashpaan.reverse import convert
@@ -11,7 +12,7 @@ from dashpaan.reverse import convert
 
 class DashpaanJSONEncoder(origin.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj, Element) or isinstance(obj, Action):
+        if isinstance(obj, Element) or isinstance(obj, Action) or isinstance(obj, Reaction):
             return obj.json()
 
         if isinstance(obj, datetime):
