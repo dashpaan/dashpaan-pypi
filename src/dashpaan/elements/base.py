@@ -1,8 +1,14 @@
+import uuid
+
+
 class Element:
     kind = None
     version = "v1"
+    id = ""
 
     def __init__(self, *args, **kwargs):
+        self.id = uuid.uuid4().hex
+
         for key, value in kwargs.items():
             if hasattr(self, key):
                 setattr(self, key, value)
@@ -13,5 +19,6 @@ class Element:
     def json(self):
         return {
             "kind": self.kind,
+            "id": self.id,
             "version": self.version
         }
