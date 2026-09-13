@@ -25,6 +25,7 @@ class Navigation(Element):
         title = ""
         icon = None
         action = None
+        badge = None
 
         def json(self):
             return {
@@ -33,6 +34,7 @@ class Navigation(Element):
                 "title": self.title,
                 "type": "item",
                 "icon": self.icon,
+                "badge": self.badge.json() if self.badge else None,
                 "action": self.action.json() if self.action else None
             }
 
@@ -61,3 +63,24 @@ class Navigation(Element):
         @classmethod
         def from_json(cls, obj):
             return Navigation.Group(**obj)
+
+    class Badge(Element):
+        kind = "nav-badge"
+
+        color = None
+        icon = None
+        title = None
+        action = None
+
+        def json(self):
+            return {
+                **super(Navigation.Badge, self).json(),
+                "color": self.color,
+                "icon": self.icon,
+                "title": self.title,
+                "action": self.action.json() if self.action else None,
+            }
+
+        @classmethod
+        def from_json(cls, obj):
+            return Navigation.Badge(**obj)
