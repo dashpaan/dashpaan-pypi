@@ -20,7 +20,7 @@ class Page(Element):
             "data": self.data,
             "variables": self.variables,
             "templates": self.templates,
-            "elements": [element.json() for element in self.elements],
+            "elements": [element.json() for element in self.elements if element],
             "navigation": self.navigation.json() if type(self.navigation) is not str else self.navigation
         }
 

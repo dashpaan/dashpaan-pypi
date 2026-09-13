@@ -19,7 +19,7 @@ class Block(Element):
             "size": self.size,
             "rounded": self.rounded,
             "background": self.background,
-            "elements": [element.json() for element in self.elements]
+            "elements": [element.json() for element in self.elements if element]
         }
 
     @classmethod

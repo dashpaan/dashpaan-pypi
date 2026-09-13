@@ -15,7 +15,7 @@ class Prompt(Action):
             "close": self.close,
             "print": self.print,
             "title": self.title,
-            "elements": [element.json() for element in self.elements]
+            "elements": [element.json() for element in self.elements if element]
         }
 
     @classmethod
